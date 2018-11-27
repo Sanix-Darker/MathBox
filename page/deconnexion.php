@@ -1,0 +1,9 @@
+<?php 
+	session_start();
+	session_destroy();
+	session_unset();
+	header('Location:../index.php');
+?>
+<script>
+	document.location="../index.php";
+</script>

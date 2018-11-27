@@ -1,6 +1,10 @@
+<?php 
+  session_start();
+  include('../include/db.php');
+?>
 <!DOCTYPE html>
   <head>
-  	<title>IUC-MathBox</title>
+  	<title> -MathBox</title>
     <meta name="description" content="">
 	<meta name="keywords" content="" />
 
@@ -29,53 +33,55 @@
   	<div class="container">
     	<div class="row">
         	<div class="col-md-6 col-sm-6">
-            	<div class="templatemo_title"><a href="#">IUC-MathBox</a></div>
+            	<div class="templatemo_title"><a href="#"> -MathBox</a></div>
                 <div class="templatemo_subtitle">Plateforme de calculs Formels et Informels</div>
             </div>
             <div class="col-md-6 col-sm-6">
             	<form id="search_form">
             		<div class="templatemo_search">
-                    	<input name="search" type="text" placeholder="Recherchez une operation/formule/module ici..." id="search">
-                    </div>
+                      <h3 style="text-align:right;">Bienvenue <b><?php echo $_SESSION['nom'];?></b></h3>
+                    	<!-- <input name="search" type="text" placeholder="Recherchez une operation/formule/module ici..." id="search"> -->
+                      <span style="float:right;"><a href="../include/index.php" class="btn btn-primary"> <i class="fa fa-rss"></i> &nbsp; Voir mon Historique</a> &nbsp; &nbsp; <a href="deconnexion.php" class="btn btn-danger">Deconnexion</a></span>
+                </div>
                 </form>
             </div>
         </div>
     </div>
   <!-- title end -->
   	<div class="site-header">
-		<div class="main-navigation">
+		<div class="main-navigation" >
 			<div class="container">
             	<div class="row">
             	<div class="col-md-12">
                 	<!-- This one in here is responsive menu for tablet and mobiles -->
                   <div class="responsive-navigation visible-sm visible-xs">
-                   <a href="#" class="menu-toggle-btn">
-                    <i class="fa fa-bars fa-2x"></i>
-                  </a>
-       			 <div class="navigation responsive_menu">
-          			 <ul>
-					<li><a class="show-1 templatemo_home" href="#">Acceuil</a></li>
-					<li><a class="show-2 templatemo_page2" href="#">Modules</a></li>
-					<li><a class="show-5 templatemo_page5" href="#">Terminal-MathBox</a></li>
-					<li><a class="show-3 templatemo_page3" href="#">Forum</a></li>
-					<li><a class="show-3 templatemo_page3" href="#">Profil</a></li>
-				</ul>
-    	    </div> <!-- /.responsive_menu -->
-   		 </div> <!-- /responsive_navigation -->
+                     <a href="#" class="menu-toggle-btn">
+                      <i class="fa fa-bars fa-2x"></i>
+                    </a>
+             			  <div class="navigation responsive_menu">
+                			<ul>
+                					<li><a class="show-1 templatemo_home" href="#">Acceuil</a></li>
+                					<li><a class="show-2 templatemo_page2" href="#">Modules</a></li>
+                					<li><a class="show-5 templatemo_page5" href="#">Terminal-MathBox</a></li>
+                					<li><a class="show-3 templatemo_page3" href="#">Forum</a></li>
+                					<!-- <li><a class="show-3 templatemo_page3" href="#">Profil</a></li> -->
+                			</ul>
+          	         </div> <!-- /.responsive_menu -->
+   		           </div> <!-- /responsive_navigation -->
                 </div>
             </div>
             </div>
-			<div class="container">
+			<div class="container" >
 				<div class="row">
                      <div class="col-md-12 navigation">
-						<div class="row main_menu">
+						<div class="row main_menu" >
                     		<!--<div class="col-md-1"><a id="prev"><i class="fa fa-arrow-left"></i></a></div>-->
-							<div class="col-md-2"><a class="show-1 templatemo_home" href="#"><div class="fa fa-home"></div></a></div>
-							<div class="col-md-2"><a class="show-2 templatemo_page2" href="#"><div class="fa fa-wrench"></div></a></div>
-							<div class="col-md-2"><a class="show-5 templatemo_page5" href="#"><div class="fa fa-terminal"></div></a></div>
-							<div class="col-md-2"><a class="show-3 templatemo_page3" href="#"><div class="fa fa-comments-o"></div></a></div>
-							<div class="col-md-2"><a class="show-5 templatemo_page5" href="#"><div class="fa fa-user"></div></a></div>
-                            <!--<div class="col-md-1"><a id="next"><i class="fa fa-arrow-right"></i></a></div>-->
+							<div class="col-md-2" style="height:130px!important;"><a class="show-1 templatemo_home" href="#"><div class="fa fa-home"></div></a></div>
+							<div class="col-md-2" style="height:130px!important;"><a class="show-2 templatemo_page2" href="#"><div class="fa fa-wrench"></div></a></div>
+							<div class="col-md-2" style="height:130px!important;"><a class="show-5 templatemo_page5" href="#"><div class="fa fa-terminal"></div></a></div>
+							<div class="col-md-2" style="height:130px!important;"><a class="show-3 templatemo_page3" href="#"><div class="fa fa-comments-o"></div></a></div>
+							<!-- <div class="col-md-2"><a class="show-5 templatemo_page5" href="#"><div class="fa fa-feed"></div></a></div> -->
+              <!--<div class="col-md-1"><a id="next"><i class="fa fa-arrow-right"></i></a></div>-->
 						</div> 
                     </div>
 				</div> 
@@ -86,7 +92,7 @@
 
 	<div class="divs">
 <!-- homepage start -->
-	<div class="content homepage" id="menu-1" style="margin-top:-30px;">
+	<div class="content homepage" id="menu-1">
 	<div class="container">
     	<div class="row">
         	<div class="col-md-12">
@@ -95,7 +101,7 @@
 					<ul class="slides">
 						<li>
 							<div class="slider-caption">
-								<h2> IUC-MathBox </h2>
+								<h2>  -MathBox </h2>
 								<p>Une plateforme de calculs Formels et Informels.</p>
 							</div>
 							<img src="images/slide1.jpg" alt="Slide 1">
@@ -112,7 +118,7 @@
                         <li>
 							<div class="slider-caption">
 								<h2>Le Forum de IM</h2>
-								<p>Discutez, echangez, posez vos problemes avec les autres utilisateurs de IUC-MathBox.</p>
+								<p>Discutez, echangez, posez vos problemes avec les autres utilisateurs de  -MathBox.</p>
 							</div>
 							<img src="images/slide3.jpg" alt="Slide 3">
 						</li>
@@ -120,7 +126,7 @@
                         <li>
 							<div class="slider-caption">
 								<h2>Contactez nous</h2>
-								<p>Si vous rencontrez des soucis sur IUC-MathBox ou vous aimerez nous contacter, faites le sur l'interface de contacts.</p>
+								<p>Si vous rencontrez des soucis sur  -MathBox ou vous aimerez nous contacter, faites le sur l'interface de contacts.</p>
 							</div>
 							<img src="images/slide4.jpg" alt="Slide 4">
 						</li>
@@ -190,7 +196,8 @@
             </div>
         </div>
         <div class="clear"></div>
-		parlez des problemes que vous rencontrez en mathematiques avec les autres membres de IUC-MathBox
+		Parlez des problemes que vous rencontrez en mathematiques avec les autres membres de  -MathBox
+    <iframe src='index.html' style='width:100%;height:40em;border:0;'></iframe>
   </div>
   </div>
 <!-- portfolio end -->
@@ -201,21 +208,26 @@
   <div class="container">
   	<div class="row">
     	<div class="col-md-12">
-        	<h1>TIM</h1>
+        	<h1>TIM(Terminal   Mathbox)</h1>
         </div>
     </div>
       <div class="clear"></div>
     <div class="row">
-		<div class="col-md-8 col-sm-12">
-			<iframe src='terminal/' style='width:100%;height:40em;border:0;'></iframe>
+		<div class="col-md-7">
+      <a href="terminal/index.php" target="_blank" class="btn btn-success" style="float:right;margin-right: 10px;">Plein ecran</a>
+			<iframe src='terminal/index.php?iframe=yes' style='width:100%;height:40em;border:0;'></iframe>
 			<!-- include('terminal/index.html'); -->
 		</div>
-		<div class="col-md-4">
-			Historique
+		<div class="col-md-5">
+			Editeur de fonctions
+      <br><br><br>
+      <hr>
+      Traceur de courbe
+      <a href="plot.php" target="_blank" class="btn btn-primary" style="float:right;margin-right: 10px;">Plein ecran</a>
+      <iframe src='plot.php?iframe=yes' style='width:122%;height:30em;border:0;'></iframe>
 		</div>
   </div>
   </div>
-
 <!-- terminal -->
 
 	</div>
