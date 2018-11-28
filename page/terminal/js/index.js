@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('terminalReslutsCont').innerHTML += "<p>" + textToAdd + "</p>";
     scrollToBottomOfResults();
   }
-	addTextToResults('Bienvenue sur TIM(Terminal MathBox) Version Betta par S@n1X D4rk3R');
+	addTextToResults('Bienvenue sur TIM(using MathBox\'s KERNEL)<br>Betta version by <a href="https://github.com/Sanix-Darker">S@n1X D4rk3R</a>');
 
   // Getting the list of keywords for help & posting it to the screen
   var postHelpList = function(){
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var helpKeyWords = [
       "- 'Google + mot clee ou terme mathematique &agrave;'' chercher (ex. google cosinus)",
       "- 'Wiki + mot clee ou terme mathematique' sur wikipedia (ex. wiki sinus)",
-      "- 'Listfunctions' pour lister toutes les fonctions integr&eacute;s dans IUC-MathBox",
+      "- 'listfunctions' pour lister toutes les fonctions integr&eacute;s dans MathBox",
       "* Vous pouvez creer des fonctions qui seront ajout&eacute;s au tableau de commandes.",
     ].join('<br>');
     addTextToResults(helpKeyWords);
@@ -59,9 +59,11 @@ document.addEventListener('DOMContentLoaded', function() {
   var Listfunctions = function(){
     // Array of all the help keywords
     var helpKeyWords = [
+      "- Ce terminal est capable de faire: ",
       "- Tous vos calculs d'algebre elementaires",
-      "- Tous les calculs sur les matrices ",
-      "- Toutes les integrales "
+      "- Tous les calculs sur les matrices",
+      "- Toutes les integrales ",
+      "NB: Toutes vos operations/commandes MATHLAB sont aussi int&eacute;gr&eacute;es au noyau MATHBOX"
     ].join('<br>');
     addTextToResults(helpKeyWords);
   }
@@ -98,8 +100,9 @@ document.addEventListener('DOMContentLoaded', function() {
               clearInput();
               addTextToResults("Tappez google + un terme &agrave; chercher.");
           }
-          else if(textInputValueLowerCase=="Listfunctions"){
-              //On devra lister les differentes fonctions ici  
+          else if(textInputValueLowerCase=="listfunctions"){
+              //On devra lister les differentes fonctions ici
+              Listfunctions();
           }
           else{
               try {

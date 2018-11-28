@@ -166,18 +166,22 @@ body, h1,h2,h3, p{
 /* Make me responsive */
 @media screen and (max-width: 1000px){
   .gradientCont{
-    height: 220px;
+    height: 100%;
   }
   .mainCont{
     width: 100%;
     padding: 0 12px;
   }
+  .mainCont *{
+    line-height: 75px;
+    font-size: 50px;
+  }
   .mainCont h2{
-    font-size: 32px;
+    font-size: 132px;
     margin: 40px 0 0 0;
   }
   .mainCont h3{
-    font-size: 16px;
+    font-size: 116px;
     margin: 0 0 40px 0;
   }
   #terminalReslutsCont{
